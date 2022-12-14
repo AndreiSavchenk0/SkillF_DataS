@@ -21,8 +21,10 @@ def random_predict(number: int = 1) -> int:
             predict_number = max - (max - min)//2
         elif number < predict_number:
             max = predict_number
-            predict_number = min + (max - min)//2
+            predict_number = max//2
         else:
             break  # выход из цикла если угадали
-
+        
     return count
+
+print(random_predict(1))
